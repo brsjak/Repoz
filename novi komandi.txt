@@ -1,0 +1,420 @@
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\d>mkdir repo
+A subdirectory or file repo already exists.
+
+C:\Users\d>cd repo
+
+C:\Users\d\repo>git init
+Reinitialized existing Git repository in C:/Users/d/repo/.git/
+
+C:\Users\d\repo>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   license.txt
+
+
+C:\Users\d\repo>git remote add origin https://github.com/Dojchinovska/Repoz.git
+
+C:\Users\d\repo>git push -u origin master
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 504 bytes | 0 bytes/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/Dojchinovska/Repoz.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\Users\d\repo>git remote -v
+origin  https://github.com/Dojchinovska/Repoz.git (fetch)
+origin  https://github.com/Dojchinovska/Repoz.git (push)
+
+C:\Users\d\repo>git pull
+Already up-to-date.
+
+C:\Users\d\repo>git clone https://github.com/SaraAnn123/hello-world.git
+Cloning into 'hello-world'...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+C:\Users\d\repo>git remote -v
+origin  https://github.com/Dojchinovska/Repoz.git (fetch)
+origin  https://github.com/Dojchinovska/Repoz.git (push)
+
+C:\Users\d\repo>git branch
+* master
+
+C:\Users\d\repo>git branch granka
+
+C:\Users\d\repo>git branch
+  granka
+* master
+
+C:\Users\d\repo>git checkout granka
+Switched to branch 'granka'
+M       license.txt
+
+C:\Users\d\repo>git add cat.txt
+fatal: pathspec 'cat.txt' did not match any files
+
+C:\Users\d\repo>add tekstgranka.txt
+'add' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\d\repo>git add tekstgranka.txt
+
+C:\Users\d\repo>git commit -m "Dodadi go tekstot na granka"
+[granka 268d0c5] Dodadi go tekstot na granka
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 tekstgranka.txt
+
+C:\Users\d\repo>$ ls
+'$' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\d\repo>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\d\repo>git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+C:\Users\d\repo>git pull
+Already up-to-date.
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        hello-world/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\d\repo>git add -A
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   hello-world
+
+
+C:\Users\d\repo>git commit -m "Fajl na sara"
+[master f5676b7] Fajl na sara
+ 1 file changed, 1 insertion(+)
+ create mode 160000 hello-world
+
+C:\Users\d\repo>git log
+commit f5676b7a6c28e63753054b28fb8be4e3c337e7f4
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:45:02 2017 +0100
+
+    Fajl na sara
+
+commit a11d2ec24f740834c43c74bcb9568d82ec8bed25
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:27:04 2017 +0100
+
+    Add License and finish readme
+
+commit ba7ea6366547f02b488a8b70d4319cfc918969d6
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:25:30 2017 +0100
+
+    Create a readme.
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+C:\Users\d\repo>git push
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 305 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/Dojchinovska/Repoz.git
+   a11d2ec..f5676b7  master -> master
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   hello-world (untracked content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\d\repo>git add hello-world
+
+C:\Users\d\repo>git commit -m "dodaden fajl"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+        modified:   hello-world (untracked content)
+
+no changes added to commit
+
+C:\Users\d\repo>git add angela.txt
+fatal: pathspec 'angela.txt' did not match any files
+
+C:\Users\d\repo>git add -A
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+
+        modified:   hello-world (untracked content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\d\repo>git add <hello-world>
+The syntax of the command is incorrect.
+
+C:\Users\d\repo>git add hello-world
+
+C:\Users\d\repo>git log
+commit f5676b7a6c28e63753054b28fb8be4e3c337e7f4
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:45:02 2017 +0100
+
+    Fajl na sara
+
+commit a11d2ec24f740834c43c74bcb9568d82ec8bed25
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:27:04 2017 +0100
+
+    Add License and finish readme
+
+commit ba7ea6366547f02b488a8b70d4319cfc918969d6
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:25:30 2017 +0100
+
+    Create a readme.
+
+C:\Users\d\repo>git commit -m "fajl"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+        modified:   hello-world (untracked content)
+
+no changes added to commit
+
+C:\Users\d\repo>git checkout granka
+warning: unable to rmdir hello-world: Directory not empty
+Switched to branch 'granka'
+
+C:\Users\d\repo>git log
+commit 268d0c57f46e67cf71eb2f0030106d6716779c90
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:43:47 2017 +0100
+
+    Dodadi go tekstot na granka
+
+commit a11d2ec24f740834c43c74bcb9568d82ec8bed25
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:27:04 2017 +0100
+
+    Add License and finish readme
+
+commit ba7ea6366547f02b488a8b70d4319cfc918969d6
+Author: Angie <dojchinovskaa@gmail.com>
+Date:   Sat Mar 25 01:25:30 2017 +0100
+
+    Create a readme.
+
+C:\Users\d\repo>git status
+On branch granka
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        hello-world/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\d\repo>git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> granka
+
+
+C:\Users\d\repo>git checkout master
+Switched to branch 'master'
+M       hello-world
+Your branch is up-to-date with 'origin/master'.
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+C:\Users\d\repo>git checkout granka
+warning: unable to rmdir hello-world: Directory not empty
+Switched to branch 'granka'
+
+C:\Users\d\repo>git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+C:\Users\d\repo>git merge granka
+Merge made by the 'recursive' strategy.
+ license.txt     | 2 +-
+ tekstgranka.txt | 1 +
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 tekstgranka.txt
+
+C:\Users\d\repo>git push -u origin granka
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 366 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Dojchinovska/Repoz.git
+ * [new branch]      granka -> granka
+Branch granka set up to track remote branch granka from origin.
+
+C:\Users\d\repo>git merge granka
+Already up-to-date.
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+C:\Users\d\repo>git push
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 297 bytes | 0 bytes/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/Dojchinovska/Repoz.git
+   f5676b7..f585210  master -> master
+
+C:\Users\d\repo>git checkout granka
+warning: unable to rmdir hello-world: Directory not empty
+Switched to branch 'granka'
+Your branch is up-to-date with 'origin/granka'.
+
+C:\Users\d\repo>git status
+On branch granka
+Your branch is up-to-date with 'origin/granka'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   tekstgranka.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        hello-world/
+        nov fajl prikacen na grankata.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\d\repo>git add -A
+
+C:\Users\d\repo>git commit -m "Promena vo fajl i dodaden nov"
+[granka 28baf4d] Promena vo fajl i dodaden nov
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 160000 hello-world
+ create mode 100644 nov fajl prikacen na grankata.txt
+
+C:\Users\d\repo>git push
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 447 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Dojchinovska/Repoz.git
+   268d0c5..28baf4d  granka -> granka
+
+C:\Users\d\repo>git pull
+Already up-to-date.
+
+C:\Users\d\repo>git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+C:\Users\d\repo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working tree clean
+
+C:\Users\d\repo>git pull
+Already up-to-date.
+
+C:\Users\d\repo>git merge granka
+Merge made by the 'recursive' strategy.
+ nov fajl prikacen na grankata.txt | 1 +
+ tekstgranka.txt                   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 nov fajl prikacen na grankata.txt
+
+C:\Users\d\repo>git push origin master
+Counting objects: 1, done.
+Writing objects: 100% (1/1), 224 bytes | 0 bytes/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Dojchinovska/Repoz.git
+   f585210..5b2e0d4  master -> master
+
+C:\Users\d\repo>git branch -d granka
+Deleted branch granka (was 28baf4d).
+
+C:\Users\d\repo>git checkout -b admin
+Switched to a new branch 'admin'
+
+C:\Users\d\repo>git add komandi.txt
+
+C:\Users\d\repo>git commit -m "Dodaden fajl so koristeni komandi"
+[admin c4c9886] Dodaden fajl so koristeni komandi
+ 1 file changed, 389 insertions(+)
+ create mode 100644 komandi.txt
+
+C:\Users\d\repo>git remote
+origin
+
+C:\Users\d\repo>git remote -v
+origin  https://github.com/Dojchinovska/Repoz.git (fetch)
+origin  https://github.com/Dojchinovska/Repoz.git (push)
+
+C:\Users\d\repo>git branch
+* admin
+  master
+
+C:\Users\d\repo>git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+C:\Users\d\repo>git pull
+Already up-to-date.
+
+C:\Users\d\repo>git add
